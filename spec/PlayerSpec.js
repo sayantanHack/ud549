@@ -6,7 +6,10 @@ describe("Player", function() {
     player = new Player();
     song = new Song();
   });
-
+// it is used for specification or specs
+// a spec is just a container for a test
+// If all of the expectation shows true then spec passes
+// if any of these expectation return false the specs fails 
   it("should be able to play a Song", function() {
     player.play(song);
     expect(player.currentlyPlayingSong).toEqual(song);
