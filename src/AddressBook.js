@@ -1,6 +1,18 @@
 function AddressBook() {
    this.contacts = [];
+   this.initialComplete = false;
+}
 
+AddressBook.prototype.getInitialContacts = function(cb){
+  var self = this;
+// using setTimeout for making it assyncronous
+
+  setTimeout(function() {
+    self.initialComplete = true;
+    if (cb) {
+      return cb();
+    }
+  }, 3)
 }
 
 AddressBook.prototype.addContact = function(contact){
